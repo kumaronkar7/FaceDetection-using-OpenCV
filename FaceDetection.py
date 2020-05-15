@@ -5,7 +5,7 @@ import requests
 face_detection = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 while face_detection.empty():
-    url = 'https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml'
+    url = 'https://raw.githubusercontent.com/kumaronkar7/FaceDetection-using-OpenCV/master/haarcascade_frontalface_default.xml'
     downloded = requests.get(url)
     open('haarcascade_frontalface_default.xml','wb').write(downloded.content)
     face_detection = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")   
